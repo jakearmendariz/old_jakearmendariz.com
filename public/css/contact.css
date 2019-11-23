@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css?family=Overpass");
+
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Average+Sans|Source+Sans+Pro&display=swap");
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Average Sans', sans-serif;
+    background-color: rgb(100, 100, 100);
+    background-color: rgb(30, 30, 30);
+    background: repeating-linear-gradient(-45deg,
+            #222,
+            #222 2px,
+            #333 2px,
+            #333 4px);
+    margin: 0;
+
+}
+
+
+.navbar {
+    position: absolute;
+    top: 0.1%;
+    right: 3vw;
+    list-style-type: none;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    list-style: none;
+    float: right;
+    margin-right: 0vw;
+
+    box-sizing: border-box;
+    border-radius: 1vw;
+    margin-top: 1px;
+
+
+    background-color: rgb(25, 54, 67, 0.6);
+    background-color: rgb(30, 30, 30, 0.0);
+
+    -webkit-animation: fadein 0s;
+}
+
+
+/**
+This is for my navagation bar
+*/
+li {
+    padding: 17px;
+    padding-top: 10px;
+    padding-bottom: 14px;
+}
+
+a:link {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+a:visited {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+a:hover {
+    text-decoration: none;
+    color: gray;
+    color: rgb(13, 71, 113);
+
+}
+
+
+a:active {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+form {
+    padding: 0;
+    margin: 0;
+    margin-top: -2rem;
+
+}
+
+.navbar {
+    background-color: rgb(30, 30, 30, 0);
+    z-index: 1000;
+}
+
+
+.name {
+    text-indent: 7px;
+    width: 80%;
+    height: 40px;
+    border-radius: 4px;
+    padding: 0;
+    font-size: 17px;
+    color: rgb(131, 131, 131);
+    border: 0px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    background-color: rgb(185, 185, 185);
+    background: rgb(220, 220, 220);
+}
+
+.email {
+    text-indent: 7px;
+    width: 80%;
+    height: 40px;
+    border-radius: 4px;
+    padding: 0;
+    font-size: 17px;
+    color: rgb(131, 131, 131);
+    border: 0px;
+    margin-bottom: 10px;
+    background-color: rgb(185, 185, 185);
+    background: rgb(220, 220, 220);
+}
+
+
+
+.prof {
+    width: 100%;
+}
+
+.message {
+    text-indent: 7px;
+    border: 0px;
+    border-radius: 4px;
+    margin: 10px;
+    width: 80%;
+    font-size: 17px;
+    padding: 0;
+    color: rgb(131, 131, 131);
+    background-color: rgb(185, 185, 185);
+    background: rgb(220, 220, 220);
+}
+
+button {
+    border-radius: 20px;
+    background-color: rgb(150, 150, 150);
+    background-color: rgb(13, 71, 113);
+
+    color: whitesmoke;
+    padding: .8vmax 4vmax;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 0;
+}
+
+button:active {
+    background-color: rgb(150, 150, 150);
+    box-shadow: 0 5px #666;
+    transform: translate;
+}
+
+button:hover {
+    background-color: rgb(13, 71, 113);
+    transform: translateY(4px);
+}
+
+
+p {
+    margin-top: 0.33vw;
+    color: rgb(240, 240, 240);
+    margin-left: 5vw;
+    font-size: 1.5vmax;
+    margin-right: 4vw;
+    margin-bottom: 3vw;
+    line-height: 2vmax;
+    line-height: 120%;
+    font-weight: 100;
+}
+
+h3 {
+    margin-top: 10vh;
+    color: rgb(240, 240, 240);
+    font-weight: 300;
+    font-size: 5vmax;
+    margin-left: 5vw;
+    margin-bottom: 4vh;
+}
+
+
+
+.grid-1 {
+    margin-top: 6vh;
+    position: relative;
+    display: grid;
+    width: 100%;
+    height: 105vh;
+    grid-template-columns: 45% 55%;
+
+}
+
+.grid-2 {
+    margin-top: -2.5rem;
+    position: relative;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 0% 100%;
+}
+
+/* items */
+.grid-1 div {
+    /*color: white;*/
+    margin-top: -3rem;
+
+
+}
+
+.grid-2 div {
+    /*color: white;*/
+    margin-top: -3rem;
+    font-size: 1.2vmax;
+
+}
+
+/* specific item styles */
+
+.item-1 {
+    height: 100vh;
+    width: 100%;
+    text-align: left;
+}
+
+.item-2 {
+    width: 100%;
+    text-align: left;
+}
+
+
+
+.item-4 {
+    padding-top: 4vh;
+    width: 100%;
+    text-align: center;
+    background: rgb(200, 200, 200);
+    font-size: 5vmax;
+}
+
+
+p {
+    font-size: 2vmax;
+}
+
+
+.a {
+    color: rgb(13, 71, 113);
+    font-size: 5vmax;
+    margin: 0;
+    padding: 0;
+}
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+
+}
+
+.con {
+    margin: 0;
+    margin-top: 10vmax;
+    padding: 0;
+    color: rgb(100, 100, 100);
+}
+
+.con h3 {
+    font-size: 5vmax;
+    margin-bottom: 1vh;
+    margin-top: 5vh;
+    margin-left: none;
+    margin-right: none;
+    padding: none;
+    text-align: center;
+
+}
+
+
+.emailme {
+    float: center;
+    margin-left: 19vw;
+    margin-right: auto;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 0;
+    left: 50%;
+    text-align: center;
+    border: none;
+
+}
+
+.emailme :hover {
+    background-color: rgb(13, 71, 113, 0);
+    border: 3px solid rgb(13, 71, 113);
+
+}
+
+
+
+@media only screen and (max-device-width : 1200px) {
+
+
+    .navbar {
+        font-size: 30px;
+    }
+
+    .grid-1 {
+        grid-template-columns: 0% 100%;
+        height: 60vh;
+    }
+
+    .item-2 {}
+
+    .emailme {
+        display: none;
+    }
+
+
+}
+
+
+
+
+footer {
+    vertical-align: middle;
+    position: relative;
+    background-color: rgb(250, 250, 250);
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    padding: 0;
+}
+
+footer a {
+    float: right;
+}
+
+.icon {
+    padding-top: 0.19vmax;
+    width: 45px;
+    height: 44px;
+    margin-left: 28px;
+    margin-right: auto;
+    transition: 0.3s;
+    opacity: 1;
+    text-align: left;
+    float: left;
+    box-shadow: 4px 4px 2px grey;
+
+}
+
+.icon:hover {
+    opacity: .6;
+}
+
+.app {
+    vertical-align: top;
+    width: 25px;
+    height: 25px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 14px;
+    opacity: .8;
+    transition: 0.4s;
+}
+
+.app:hover {
+    opacity: 0.3;
+}
