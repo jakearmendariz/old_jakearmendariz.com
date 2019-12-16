@@ -18,6 +18,7 @@ var ave;
 var unit;
 var pause = false;
 var txt;
+var moves = new Array(30);
 
 $(document).ready(function () {
 
@@ -51,6 +52,11 @@ function setup() {
     scale = unit;
     ave = height + width / 2;
     frameRate(15);
+
+    for (var i = 0; i < 30; i++) {
+        moves[i] = new Array(30);
+    }
+
     food = createVector(
         x = unit * Math.round(Math.random() * 29),
         y = unit * Math.round(Math.random() * 29),
@@ -69,6 +75,18 @@ function setup() {
     posions[0] = posion;
 
 
+}
+
+var initGraph = function () {
+    for (var i = 0; i < 30; i++) {
+        for (var j = 0; j < 30; j++) {
+            moves[i][j] = 0;
+
+        }
+    }
+    for (var i = 0; i < body.length; i++) {
+        moves[body[i].x][body[i].y] = -1;
+    }
 }
 
 function draw() {
@@ -126,28 +144,6 @@ function draw() {
         }
         text("High score = " + a + "", .5 * width, .66 * height);
         text("Press any button to restart", .5 * width, .8 * height);
-
-
-        /*
-                // writeFile function is defined. 
-                const fs = require('fs')
-
-                // Data which will write in a file. 
-                let data = st;
-
-                // Write data in 'Snakers.txt' . 
-                fs.writeFile('Snakers.txt', data, (err) => {
-
-                    // In case of a error throw err. 
-                    if (err) throw err;
-                })
-
-                fs.readFile('Snakers.txt', (err, data) => {
-                    if (err) throw err;
-
-                    console.log(data.toString());
-                })
-        */
     }
 }
 
@@ -207,45 +203,7 @@ function keyPressed() {
         }
         gameStarted = true;
     }
-    if (body.length == 1) {
-        if (keyCode == UP_ARROW) {
-            s.dir(0, -1);
-            direction = 3;
-            pause = false;
-        } else if (keyCode == DOWN_ARROW) {
-            s.dir(0, 1);
-            direction = 1;
-        } else if (keyCode == RIGHT_ARROW) {
-            s.dir(1, 0);
-            direction = 0;
-        } else if (keyCode == LEFT_ARROW) {
-            s.dir(-1, 0);
-            direction = 2;
-        } else if (keyCode == 83) {
-            s.dir(0, 0);
-            console.log("paused");
-            pause = true;
-        }
-    } else {
-        if (keyCode == UP_ARROW && direction !== 1) {
-            s.dir(0, -1);
-            direction = 3;
-            pause = false;
-        } else if (keyCode == DOWN_ARROW && direction !== 3) {
-            s.dir(0, 1);
-            direction = 1;
-        } else if (keyCode == RIGHT_ARROW && direction !== 2) {
-            s.dir(1, 0);
-            direction = 0;
-        } else if (keyCode == LEFT_ARROW && direction !== 0) {
-            s.dir(-1, 0);
-            direction = 2;
-        } else if (keyCode == 83) {
-            s.dir(0, 0);
-            console.log("paused");
-            pause = true;
-        }
-    }
+
     if (gameOver && gameStarted) {
         gameOver = false;
         gameStarted = false;
@@ -291,6 +249,12 @@ var right = function () {
     direction = 0;
 }
 
+
+
+var turn = function () {
+
+
+}
 /**
 Snake is not the actual snake but just one part
 The snake is an array of Snake objects
@@ -302,8 +266,8 @@ function Snake() {
     this.xSpeed = unit;
     this.ySpeed = 0;
     //a, b represent the initial values of head
-
     this.update = function () {
+        turn();
         var a = this.x;
         var b = this.y;
         this.x += this.xSpeed;
@@ -367,6 +331,8 @@ function Snake() {
         this.xSpeed = x * this.scale;
         this.ySpeed = y * this.scale;
     };
+
+
 
 }
 
