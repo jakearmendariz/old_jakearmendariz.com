@@ -96,11 +96,14 @@ function draw() {
         //s.show();
         showSnake();
         fill(100, 255, 100);
-        rect(food.x, food.y, unit, unit);
+        ellipse(food.x + unit / 2, food.y + unit / 2, unit, unit);
         if (difficulty == 3) {
             fill(255, 55, 55);
             for (var i = 0; i < posions.length; i++) {
-                rect(posions[i].x, posions[i].y, unit, unit);
+                fill(255, 55, 55);
+                ellipse(posions[i].x + unit / 2, posions[i].y + unit / 2, unit, unit);
+                fill(0, 0, 0);
+                ellipse(posions[i].x + unit / 2, posions[i].y + unit / 2, unit * 2 / 3, unit * 2 / 3);
             }
         }
         if (death()) {
@@ -360,6 +363,7 @@ function Snake() {
     this.show = function () {
         fill(255);
         noStroke();
+        //ellipse(this.x + unit / 2, this.y + unit / 2, unit, unit);
         rect(this.x, this.y, unit, unit);
     };
 
